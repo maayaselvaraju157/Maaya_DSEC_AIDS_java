@@ -1,0 +1,238 @@
+1) create a java python for int,float,string 
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Integer Number:");
+        int a = sc.nextInt();
+        sc.nextLine();
+        System.out.println("Enter String:");
+        String s = sc.nextLine();
+        System.out.println("Enter Float Number:");
+        float f = sc.nextFloat();
+        System.out.println("Hello World");
+        System.out.println(a);
+        System.out.println(s);
+        System.out.println(f);
+    }
+}
+
+2)create a java program with emp id,name,branch,salary,yrs of exp 
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Emp_id:");
+        int a = sc.nextInt();
+        sc.nextLine();
+        System.out.println("Enter Emp Name:");
+        String m = sc.nextLine();
+        System.out.println("Enter Branch of the Emp:");
+        String s = sc.nextLine();
+        System.out.println("Enter Salary:");
+        double d = sc.nextDouble();
+        System.out.println("Enter Years of Exp:");
+        int b = sc.nextInt();
+        sc.nextLine();
+        System.out.println(a);
+        System.out.println(m);
+        System.out.println(s);
+        System.out.println(d);
+        System.out.println(b);
+    }
+}
+
+3)Hello,Java!
+
+4)Hospital Patient Record
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Patient_id:");
+        int a = sc.nextInt();
+        sc.nextLine();
+        System.out.println("Enter Patient Name:");
+        String m = sc.nextLine();
+        System.out.println("Enter Admitted Status:");
+        String s = sc.nextLine();
+        System.out.println("Enter Body Temp:");
+        float f = sc.nextFloat();
+        System.out.println("Enter Age:");
+        int b = sc.nextInt();
+        sc.nextLine();
+        System.out.println(a);
+        System.out.println(m);
+        System.out.println(s);
+        System.out.println(f);
+        System.out.println(b);
+    }
+}
+
+5)Student Registration Form
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Roll Number:");
+        int a = sc.nextInt();
+        sc.nextLine();
+        System.out.println("Enter Student Name:");
+        String m = sc.nextLine();
+        System.out.println("Enter Dept:");
+        String s = sc.nextLine();
+        System.out.println("Enter Percentage:");
+        float f = sc.nextFloat();
+       
+        System.out.println(a);
+        System.out.println(m);
+        System.out.println(s);
+        System.out.println(f);
+      
+    }
+}
+
+6)choose a correct datatype with population,product price,blood group,acc ver,emp name 
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Population:");
+        int a = sc.nextInt();
+        sc.nextLine();
+        System.out.println("Enter Employee Name:");
+        String m = sc.nextLine();
+        System.out.println("Enter Blood Group symbol:");
+        String s = sc.nextLine();
+        System.out.println("Enter Accout verified:");
+        String z = sc.nextLine();
+        System.out.println("Enter Product Price:");
+        float f = sc.nextFloat();
+        
+        System.out.println(a);
+        System.out.println(m);
+        System.out.println(s);
+        System.out.println(z);
+       
+    }
+}
+
+7)Online Shopping Address Form
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Name:");
+        String m = sc.nextLine();
+        System.out.println("Enter Address:");
+        String s = sc.nextLine();
+        System.out.println("Enter District:");
+        String z = sc.nextLine();
+        System.out.println("Enter PIN CODE:");
+        int a = sc.nextInt();
+        sc.nextLine();
+        System.out.println("Enter Delivery info:");
+        String y = sc.nextLine();
+        
+       
+        
+        System.out.println(m);
+        System.out.println(s);
+        System.out.println(z);
+        System.out.println(a);
+        System.out.println(y);
+       
+    }
+}
+
+8)Movie Ticket Booking Profile
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Customer:");
+        String m = sc.nextLine();
+        System.out.println("Movie:");
+        String s = sc.nextLine();
+        System.out.println("Ticket Price:");
+        double z = sc.nextDouble();
+        System.out.println("Tickets:");
+        int a = sc.nextInt();
+        sc.nextLine();
+       
+        System.out.println(m);
+        System.out.println(s);
+        System.out.println(z);
+        System.out.println(a);
+       
+    }
+}
+
+9)Age and City
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int a = sc.nextInt();
+        sc.nextLine();
+        
+        String m = sc.nextLine();
+       
+       
+        System.out.println("Age:"+a);
+        System.out.println("City:"+m);
+       
+    }
+}
+
+10)Product Information Card
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Product_id:");
+        int a = sc.nextInt();
+        sc.nextLine();
+        System.out.println("Enter Product Name:");
+        String m = sc.nextLine();
+        System.out.println("Enter Product Price:");
+        double d = sc.nextDouble();
+        sc.nextLine();
+        System.out.println("Enter Product Availabilty:");
+        String s = sc.nextLine(); 
+        
+        System.out.println(a);
+        System.out.println(m);
+        System.out.println(d);
+        System.out.println(s);
+    }
+}  
+
+11)Student Profile
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Enter Student Name:");
+        String m = sc.nextLine();
+
+        System.out.println("Enter Age:");
+        int a = sc.nextInt();
+        sc.nextLine();
+        
+        System.out.println("Enter Grade:");
+        String d = sc.nextLine();
+        
+        System.out.println("Enter Placement Status:");
+        String s = sc.nextLine(); 
+        
+        System.out.println(m);
+        System.out.println(a);
+        System.out.println(d);
+        System.out.println(s);
+    }
+}  
+
+
