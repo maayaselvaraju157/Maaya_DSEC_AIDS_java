@@ -1,0 +1,203 @@
+1)Using Relational operator
+class Main {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 20;
+        int large = (a>b)?a:b;
+        System.out.println("Largest number:"+large);
+    }
+}
+
+2)Person eligible for voting
+
+class Main {
+    public static void main(String[] args) {
+        int a = 20;
+        String result = (a>=18)?"Eligible for vote":"Not Eligible for vote";
+        System.out.println(result);
+    }
+}
+
+3)Find Pass or Fail 
+
+class Main {
+    public static void main(String[] args) {
+        int a = 20;
+        int pass = 40;
+        String result = (a>=pass)?"Pass":"Fail";
+        System.out.println(result);
+    }
+}
+
+4)Assignment operator
+
+class Main {
+    public static void main(String[] args) {
+        int balance = 1000;
+        balance += 500;
+        System.out.println(balance);
+        balance -= 200;
+        System.out.println(balance);
+        balance *= 2;
+        System.out.println(balance);
+        
+    }
+}
+
+5)Bank Program
+class Main {
+    public static void main(String[] args) {
+        int balance = 7000;
+        balance += 1500;
+        System.out.println("Deposit:"+balance);
+        balance -= 200;
+        System.out.println("Withdraw:"+balance);
+      
+        System.out.println("Total Balance:"+balance);
+        
+    }
+}
+
+6)AND operator 
+class Main {
+    public static void main(String[] args) {
+       boolean id = true;
+        boolean ticket = false;
+        System.out.println(id && ticket);
+        
+    }
+}
+
+7)OR operator
+
+class Main {
+    public static void main(String[] args) {
+       boolean id = true;
+        boolean ticket = false;
+        System.out.println(id || ticket);
+        
+    }
+}
+
+8)NOT operator
+class Main {
+    public static void main(String[] args) {
+       boolean id = true;
+        
+        System.out.println(!id);
+        
+    }
+}
+
+9)Assignment operator
+class Main {
+    public static void main(String[] args) {
+       int id = 10;
+        int ticket = 20;
+        id += ticket;
+        
+        System.out.println(id);
+        
+    }
+
+
+PRACTICE TASK
+1)Even or Odd
+class Main {
+    public static void main(String[] args) {
+       int a = 23547669;//we can assign any value
+       String result = (a%2 == 0)?"Even":"Odd";
+        
+        System.out.println(result);
+        
+    }
+
+2)Eligible Age
+class Main {
+    public static void main(String[] args) {
+        int a = 20;
+        String result = (a>=18)?"Eligible for vote":"Not Eligible for vote";
+        System.out.println(result);
+    }
+}
+
+
+3)Student Result in multiple lines
+class Main {
+    public static void main(String[] args) {
+       int a = 78;
+        int b = 15;
+        int c = 97;
+        int pass = 35;
+        String result = (a>=pass)?"PASS":"FAIL";
+        String result1 = (b>=pass)?"PASS":"FAIL";
+        String result2 = (c>=pass)?"PASS":"FAIL";
+        
+        System.out.println(result);
+        System.out.println(result1);
+        System.out.println(result2);
+    }
+}
+
+4)Find Greater number
+class Main {
+    public static void main(String[] args) {
+       int a = 78;
+        int b = 15;
+        System.out.println(a==b ? "Equal:" : (a>b) ? a:b);   
+    }
+}
+
+5)Find Positive or Negative 
+class Main {
+    public static void main(String[] args) {
+        int n = -5;
+        System.out.println(n > 0 ? "Positive" : (n < 0 ? "Negative" : "Zero"));
+    }
+}
+
+6)Divisibilty Check
+class Main {
+    public static void main(String[] args) {
+        int n = 15;
+        System.out.println(n % 3 == 0 && n % 5 == 0
+                ? "Divisible by Both" : "Not Divisible by Both");
+    }
+}
+
+7)Find Biggest number among three numbers
+class Main {
+    public static void main(String[] args) {
+        int a = 10, b = 25, c = 15;
+        int max = (a >= b && a >= c) ? a : (b >= c ? b : c);
+        System.out.println(max);
+    }
+}
+
+8)Last digit is Even
+'class Main {
+    public static void main(String[] args) {
+        int n = -1234;
+        System.out.println(Math.abs(n % 10) % 2 == 0 ? "Yes" : "No");
+    }
+}
+
+9)Free delivery program
+class Main {
+    public static void main(String[] args) {
+        int amount = 500;
+        boolean premium = true;
+
+        System.out.println(amount >= 1000 || premium
+                ? "Free Delivery" : "Delivery Charges Apply");
+    }
+}
+
+10)Discount calaculator
+class Main {
+    public static void main(String[] args) {
+        double amount = 2500;
+        double total = amount >= 2000 ? amount * 0.90 : amount;
+        System.out.println(total);
+    }
+}
