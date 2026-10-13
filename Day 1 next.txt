@@ -1,0 +1,50 @@
+Format using Escape Sequences
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Name:");
+        String s = sc.nextLine();
+
+        System.out.println("Course:");
+        String z = sc.nextLine();
+        System.out.println("Level:");
+        String m = sc.nextLine();
+        System.out.println(s);
+        System.out.println(z);
+        System.out.println(m);
+    }
+}
+    
+College Information
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+
+        System.out.println("College : ABC Engineering College");
+        System.out.println("Dept : AI&DS");
+        System.out.println("Course : Java programming");
+    }
+}
+  
+Single Line Display
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+
+        System.out.println("Java is simple Java is powerful!");
+    }
+}
+            
+
+Hello,Java! 
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+
+        System.out.println("Hello,Java!");
+        System.out.println("Welcome to Programming.");
+        System.out.println("My Journey starts today.");
+    }
+}
+                   
