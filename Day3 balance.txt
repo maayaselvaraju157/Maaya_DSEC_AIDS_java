@@ -1,0 +1,260 @@
+1)ATM Balance Alert
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int balance = 570;
+        if(balance < 1000){
+            System.out.println("Low Balance Alert");
+        }  
+           }
+}
+
+2)Odd number reward
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int a = 57;
+        if(a % 2 != 0){
+            System.out.println("Bonus unlocked");
+        }  
+           }
+}
+
+3)Temperature status
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int a = 678;
+        if(a >= 30){
+            System.out.println("Warm day");
+        }else{
+          System.out.println("Cool day");      
+        } 
+           }
+}
+
+4)Last digit challenge
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int a = 71127;
+        if(a %10 == 7){
+            System.out.println("Lucky ending");
+        }else{
+          System.out.println("Not a lucky ending");      
+        } 
+           }
+}
+
+5)Shopping bag check
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int a = 71;
+        if(a <= 500){
+            System.out.println("Reusable bag");
+        }else{
+          System.out.println("No free bag");      
+        } 
+           }
+}
+
+6)Exam grade calculator
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int mark = 98;
+        if(mark < 0 || mark > 100){
+            System.out.println("Invalid mark");
+        }else if(mark >= 90){
+          System.out.println("Grade A");      
+        }else if(mark >= 75){ 
+           System.out.println("Grade B");     
+        }else if(mark >= 60){
+           System.out.println("Grade C");     
+        }else if(mark >= 35){
+           System.out.println("Grade D");     
+        }else{
+         System.out.println("Fail");    
+    }
+    }
+           }
+7)Electricity consumption status
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+
+        int unit = 299;
+        if(unit < 0){
+            System.out.println("Low consumption");
+        }else if(unit < 199){
+          System.out.println("Medium consumption");      
+        }else if(unit < 299){ 
+           System.out.println("High consumption");     
+        }else if(unit < 300){
+           System.out.println("Very high consumption");     
+        }else{
+         System.out.println("Negative units");    
+    }
+    }
+           }
+8)Employee experience level
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+
+        int exp = 9;
+        if(exp == 0){
+            System.out.println("Fresher");
+        }else if(exp <= 2){
+          System.out.println("Junior");      
+        }else if(exp <= 5){ 
+           System.out.println("Intermediate");     
+        }else if(exp > 5){
+           System.out.println("Senior");     
+        }else{
+         System.out.println("Negative exp");    
+    }
+    }
+           }
+9)Delivery charge calculator
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+
+        int amount = 15679 ;
+        if(amount >= 2000){
+            System.out.println("Free delivery");
+        }else if(amount > 1999){
+          System.out.println("Rs 30 delivery charge");      
+        }else if(amount > 1000){ 
+           System.out.println("Rs 60 delivery charge");     
+        }else{
+         System.out.println("Invalid order");    
+    }
+    }
+           }
+10)Digital clock greeting
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+
+        int hour = 10 ;
+        if(hour < 0 || hour > 23){
+            System.out.println("Invalid hour");
+        }else if(hour >= 5 && hour <= 11){
+          System.out.println("Good Morning");      
+        }else if(hour >= 16 && hour <= 12){ 
+           System.out.println("Good Afternoon");     
+        }else if(hour >= 20 && hour <= 17){ 
+           System.out.println("Good Evening");     
+        }else{
+         System.out.println("Good Night");    
+    }
+    }
+   
+        }
+
+11)Login Verification
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+            boolean username = true,password = true;
+            if(username){
+                    if(password){
+                        System.out.println("Login successfully");
+                }else{
+                            System.out.println("Incorrect password");
+                    }
+            }else{
+                    System.out.println("Invalid username");
+                    }
+    }
+           }
+
+12)Scholarship selection
+class Main {
+    public static void main(String[] args) {
+        int mark = 85, attendance = 88;
+        if (mark >= 80) {
+            if (attendance >= 90)
+                System.out.println("Scholarship Approved");
+            else
+                System.out.println("Attendance Too Low");
+        } else
+            System.out.println("Not Eligible by Mark");
+    }
+}
+
+13)ATM withdrawal verification
+class Main {
+    public static void main(String[] args) {
+        int balance = 5000, amount = 6000;
+        if (amount > 0) {
+            if (amount <= balance)
+                System.out.println("Withdrawal Successful");
+            else
+                System.out.println("Insufficient Balance");
+        } else
+            System.out.println("Invalid Amount");
+    }
+}
+
+14)Online exam eligibility
+class Main {
+    public static void main(String[] args) {
+        boolean registered = true, hallTicket = false;
+        if (registered) {
+            if (hallTicket)
+                System.out.println("Allowed to Attend");
+            else
+                System.out.println("Download Hall Ticket");
+        } else
+            System.out.println("Registration Required");
+    }
+}
+
+15)Number scholarship
+class Main {
+    public static void main(String[] args) {
+        int a = 12, b = 4;
+        if (a == 0 || b == 0)
+            System.out.println("Cannot Perform Divisibility Check");
+        else if (a == b)
+            System.out.println("Both Numbers are Equal");
+        else if (a > b) {
+            if (a % b == 0)
+                System.out.println("Greater Number is a Multiple of Smaller Number");
+            else
+                System.out.println("Greater Number is Not a Multiple");
+        } else {
+            if (b % a == 0)
+                System.out.println("Greater Number is a Multiple of Smaller Number");
+            else
+                System.out.println("Greater Number is Not a Multiple");
+        }
+    }
+}
+ 
