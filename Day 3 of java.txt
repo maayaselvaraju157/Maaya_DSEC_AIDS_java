@@ -1,0 +1,297 @@
+1)IF
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+       
+        int overdue = sc.nextInt();
+       if(overdue > 0){
+           System.out.println("Fine applied 10rs per day");
+    
+       }
+        System.out.println("Updated");
+
+    }
+}
+
+2)IF ELSE
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int vehicletype = sc.nextInt();
+        if(vehicletype == 2){
+            System.out.println("Parking charge 20rs ");
+            
+        }else{
+            System.out.println("parking charge 50rs");
+        }
+        
+    }
+}
+
+3)ELSE IF LADDER
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Double data= sc.nextDouble();
+        if(data < 0){
+            System.out.println("Invalid input");
+            
+        }else if(data <= 1){
+            System.out.println("light usage");
+        }else if(data <= 3){
+            System.out.println("moderate usage");
+        }else{
+            System.out.println("heavy usage");
+        }
+        
+    }
+}
+
+4)NESTED IF
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Boolean hasregistered= sc.nextBoolean();
+        Boolean haslogin = sc.nextBoolean();
+        if(hasregistered){
+            if(haslogin){
+                System.out.println("login access granted");
+            }
+            else{
+            System.out.println("login access denied");
+            }
+        }
+        else{
+            System.out.println("first register and login");
+        }
+    }
+        
+    }
+
+
+5)SWITCH CASE
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+         int order = sc.nextInt();
+        switch(order){
+            case 1:
+                System.out.println("Pizza ordered");
+                break;
+            case 2:
+                System.out.println("Burgar ordered");
+                break;
+            case 3:
+                System.out.println("Milkshake ordered");
+                break;
+            case 4:
+                System.out.println("French Fries ordered");
+                break;
+        default:
+                System.out.println("There is nothing ordered");
+              
+        }
+              
+        
+    }
+    }
+
+
+PRACTICE QNS
+1)Bank check
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+         int Bank = sc.nextInt();
+        switch(Bank){
+            case 1:
+                System.out.println("Check balance");
+                break;
+            case 2:
+                System.out.println("Deposit money");
+                break;
+            case 3:
+                System.out.println("Withdraw money");
+                break;
+        default:
+                System.out.println("Exit");
+              
+        }
+              
+        
+    }
+    }
+
+2)Traffic signa;
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+         String traffic = sc.nextLine();
+        switch(traffic){
+            case "RED":
+                System.out.println("STOP");
+                break;
+            case "YELLOW":
+                System.out.println("WAIT");
+                break;
+            case "GREEN":
+                System.out.println("GO");
+                break;
+        default:
+                System.out.println("Invalid signal");
+              
+        }
+    }
+    }
+
+3)Month print
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+         int month = sc.nextInt();
+        switch(month){
+            case 1:
+                System.out.println("JANUARY");
+                break;
+                   case 2:
+                System.out.println("FEBRUARY");
+                break;
+              case 3:
+                System.out.println("MARCH");
+                break;
+
+               case 4:
+                System.out.println("APRIL");
+                break;
+            case 5:
+                System.out.println("MAY");
+                break;
+            case 6:
+                System.out.println("JUNE");
+                break;
+            case 7:
+                System.out.println("JULY");
+                break;
+            case 8 :
+                System.out.println("AUGUST");
+                break;
+            case 9:
+                System.out.println("SEPTEMBER");
+                break;
+            case 10:
+                System.out.println("OCTOBER");
+                break;
+                   case 11:
+                System.out.println("NOVEMBER");
+                break;
+            case 12:
+                System.out.println("DECEMBER");
+                break;
+         
+        default:
+                System.out.println("Invalid Month");
+              
+        }
+    }
+    }
+
+4)Get balnce withdraw in bank 
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int balance = 1000;
+        int bank = sc.nextInt();
+        switch(bank){
+            case 1:
+                System.out.println("Check balance"+balance);
+                break;
+            case 2:
+                balance += 300;
+                System.out.println("Deposit money"+balance);
+                break;
+            case 3:
+                balance -= 300;
+                System.out.println("Withdraw money"+balance);
+                break;
+            case 4:
+                System.out.println("Exit");
+                break;
+        default:
+                System.out.println("invalid input");
+              
+        }
+              
+        
+    }
+    }
+
+5)Food order menu
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String menu = sc.nextLine();
+        switch(menu){
+            case "BURGER":
+                System.out.println("120Rs");
+                break;
+            case "PIZZA":
+                System.out.println("250Rs");
+                break;
+            case "SANDWICH":
+                System.out.println("100Rs");
+                break;
+            case "PASTA":
+                System.out.println("180Rs");
+                break;
+        default:
+                System.out.println("invalid input");
+              
+        }  
+    }
+    }
+
+6)Calculator menu
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+         int a = sc.nextInt();
+        int b = sc.nextInt();
+        char operator = sc.next().charAt(0);
+        switch(operator){
+            case '+':
+                System.out.println("Result:"+(a+b));
+                break;
+            case '-':
+                System.out.println("Result:"+(a-b));
+                break;
+            case '*':
+                System.out.println("Result:"+(a*b));
+                break;
+                case '/':
+                if(b!=0){
+                    System.out.println("Result:"+(a/b));
+                }else{
+                    System.out.println("Cannot divide by zero");
+                }
+                break;
+        default:
+                System.out.println("Exit");
+              
+        }
+              
+        
+    }
+    }
+
