@@ -1,0 +1,172 @@
+1)Using "FOR" (forward)
+public class Main {
+    public static void main(String[] args) {
+        for(int i=1;i<=10;i++){
+            System.out.println(i);
+        }
+        
+    }
+
+2)Using "FOR" (reverse)
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+
+public class Main {
+    public static void main(String[] args) {
+        for(int i=10;i<=1;i--){
+            System.out.println(i);
+        }
+        
+    }
+}
+
+3)Using "FOR" (Table 7)
+public class Main {
+    public static void main(String[] args) {
+        int num = 7;
+        for(int i=1;i<=10;i++){
+            System.out.println(num + "x" + i + "="+(num*i));
+        }
+        
+    }
+}
+
+4)Using "WHILE" (Count)
+
+public class Main {
+    public static void main(String[] args) {
+        int count = 7;
+        while(count >= 1){
+            System.out.println("countdown:"+count);
+            count--;
+        }
+        System.out.println("start!");
+        
+    }
+}
+
+5)Using "WHILE" (Count numbers)
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+
+public class Main {
+    public static void main(String[] args) {
+        int num = 9853689;
+        int count = 0;
+        while(num > 0){
+            num = num/10;
+            count++;
+        }
+        System.out.println("Num of digits:"+count);
+        
+    }
+}
+
+6)Using "WHILE" (add numbers)
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        
+        int n = sc.nextInt();
+        int sum = 0;
+        while(n > 0){
+            int digit = n%10;
+            sum = sum+digit;
+            n = n/10;
+        }
+        System.out.println("Sum of digits:"+ sum);
+        
+    }
+}
+
+7)Greatest number finding
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int gcd =1;
+            int limit = Math.min(a,b);
+        for (int i = 1; i <= limit; i++){
+                if(a%i == 0 && b%i == 0){
+                        gcd = i;
+                }
+        }
+            System.out.println("GCD =" + gcd);
+        }
+           
+    }
+
+8)Reverse order
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        
+        int n = sc.nextInt();
+        int reverse = 0;
+       while(n>0){
+               int digit = n%10;
+               reverse = reverse*10  + digit;
+               n = n/10;
+       }
+            System.out.println("Reverse =" + reverse);
+        }
+           
+    }
+
+9)Palindrome or not
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        
+        int n = sc.nextInt();
+        int reverse = 0;
+        int original = n;
+       while(n>0){
+               int digit = n%10;
+               reverse = reverse*10  + digit;
+               n = n/10;
+       }
+            System.out.println("Reverse =" + reverse);
+        if(original == reverse){
+           System.out.println("Palindrome"); 
+        }else{
+            System.out.println("Not a Palindrome");
+        }
+        }
+           
+    }
+
+10)Find the Factorial values
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        
+        int n = sc.nextInt();
+        long fact = 1;
+
+            for(int i = 1; i<= n;i++){
+                    fact = fact*i;
+            }
+            System.out.println("Factorial ="+ fact);
+        }
+           
+    }
+
+
