@@ -1,0 +1,449 @@
+1)Find the number is prime or not
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int count = 0;
+
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                count++;
+            }
+        }
+
+        if (count == 2) {
+            System.out.println("Prime number");
+        } else {
+            System.out.println("Not a prime number");
+        }
+
+        sc.close();
+    }
+}
+
+2)Find the number is perfect or not
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int sum = 0;
+
+        for (int i = 1; i < n; i++) {
+            if (n % i == 0) {
+                sum = sum+i;
+            }
+        }
+
+        if (sum == n) {
+            System.out.println("Perfect number");
+        } else {
+            System.out.println("Not a perfect number");
+        }
+
+        sc.close();
+    }
+}
+
+3)Find the num is Armstrong or not
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int temp = n, sum = 0;
+        while(temp > 0){
+            int digit = temp % 10;
+            sum = sum+digit*digit*digit;
+            temp = temp/10;
+        }
+
+        if (sum == n) {
+            System.out.println("Armstrong num");
+        } else {
+            System.out.println("Not a armstrong number");
+        }
+
+        sc.close();
+    }
+}
+
+4)Find the num is neon or not
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int square = n*n,sum = 0;
+        
+        while(square > 0){
+            int digit = square % 10;
+            sum = sum+digit;
+            square = square/10;
+        }
+
+        if (sum == n) {
+            System.out.println("Neon num");
+        } else {
+            System.out.println("Not a Neon number");
+        }
+
+    }
+}
+
+5)Find the num is Spy or not
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int sum = 0, product = 1;
+
+        while (n > 0) {
+            int digit = n % 10;
+            sum = sum + digit;
+            product = product * digit;
+            n = n / 10;
+        }
+
+        if (sum == product) {
+            System.out.println("Spy number");
+        } else {
+            System.out.println("Not a Spy number");
+        }
+
+    }
+}
+
+PATTER PROGRAM
+1)Right angle triangle
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        int n = 5;
+            for(int i =1 ; i <= n ; i++){
+                    for(int j =1; j <= i; j++){
+                            System.out.print("* ");
+                    }
+                    System.out.println();
+            }
+
+    }
+}
+
+2)Inverse Right angle triangle
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        int n = 5;
+            for(int i =n ; i >= 1 ; i--){
+                    for(int j =1; j <= i; j++){
+                            System.out.print("* ");
+                    }
+                    System.out.println();
+            }
+
+    }
+}
+
+3)Left angle triangle
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        int n = 5;
+            for(int i =1 ; i <= n ; i++){
+                    for(int j =1; j <= n-i; j++){
+                            System.out.print(" ");
+                    }
+                    for(int j=1;j<=i;j++){
+                            System.out.print("*");
+                    }
+                    System.out.println();
+            }
+
+    }
+}
+
+
+4)Inverse Left angle triangle
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        int n = 5;
+            for(int i =n ; i >= 1 ; i--){
+                    for(int j =1; j <= n-i; j++){
+                            System.out.print(" ");
+                    }
+                    for(int j=1;j<=i;j++){
+                            System.out.print("*");
+                    }
+                    System.out.println();
+            }
+
+    }
+}
+
+
+5)Inverse Pyramid triangle
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        int n = 5;
+            for(int i =n ; i >= 1 ; i--){
+                    for(int j =1; j <= n-i; j++){
+                            System.out.print(" ");
+                    }
+                    for(int j=1;j<=i;j++){
+                            System.out.print("* ");
+                    }
+                    System.out.println();
+            }
+
+    }
+}
+
+6)Pyramid triangle
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        int n = 5;
+            for(int i =1 ; i <= n ; i++){
+                    for(int j =1; j <= n-i; j++){
+                            System.out.print(" ");
+                    }
+                    for(int j=1;j<=i;j++){
+                            System.out.print("* ");
+                    }
+                    System.out.println();
+            }
+
+    }
+}
+
+7)Incase we can use numbers
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        int n = 5;
+            for(int i =1 ; i <= n ; i++){
+                    for(int j =1; j <= n-1; j++){
+                            System.out.print("");
+                    }
+                    for(int j=1;j<=i;j++){
+                            System.out.print(j);
+                    }
+                    System.out.println();
+            }
+
+    }
+}
+
+8)In Square box format
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        int n = 5;
+            for(int i =1 ; i <= n ; i++){
+                    for(int j =1; j <= n-1; j++){
+                            System.out.print("* ");
+                    }
+                    System.out.println();
+            }
+
+    }
+}
+
+9)Square box without inside star which means hollow
+
+class Main {
+    public static void main(String[] args) {
+        int n = 5;
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (i == 1 || i == n || j == 1 || j == n) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+10)Hollow Right angle triangle
+
+class Main {
+    public static void main(String[] args) {
+        int n = 5;
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                if (j == 1 || j == i || i == n) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+11)Hollow Inverse Right angle triangle
+
+class Main {
+    public static void main(String[] args) {
+        int n = 5;
+
+        for (int i = n; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                if (j == 1 || j == i || i == n) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+12)Hollow Left angle triangle
+
+class Main {
+    public static void main(String[] args) {
+        int n = 5;
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print("  ");
+            }
+
+            for (int j = 1; j <= i; j++) {
+                if (j == 1 || j == i || i == n) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+
+            System.out.println();
+        }
+    }
+}
+
+13)Hollow Inverse Left angle triangle
+
+class Main {
+    public static void main(String[] args) {
+        int n = 5;
+
+        for (int i = n; i >= 1; i--) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print("  ");
+            }
+
+            for (int j = 1; j <= i; j++) {
+                if (j == 1 || j == i || i == n) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+
+            System.out.println();
+        }
+    }
+}
+
+14)Hollow Pyramid triangle
+
+class Main {
+    public static void main(String[] args) {
+        int n = 5;
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 1; j <= i; j++) {
+                if (i == n || j == 1 || j == i) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+
+            System.out.println();
+        }
+    }
+}
+
+15)Hollow Inverse Pyramid triangle
+
+class Main {
+    public static void main(String[] args) {
+        int n = 5;
+
+        for (int i = n; i >= 1; i--) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 1; j <= i; j++) {
+                if (i == n || j == 1 || j == i) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
