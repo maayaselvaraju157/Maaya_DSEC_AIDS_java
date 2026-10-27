@@ -284,6 +284,49 @@ public class Main {
     }
 }
 
+6)Third largest number
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a[] = new int[5];
+
+        System.out.println("Enter 5 Elements:");
+        for (int i = 0; i < 5; i++) {
+            a[i] = sc.nextInt();
+        }
+
+        int largest = Integer.MIN_VALUE;
+        int second = Integer.MIN_VALUE;
+        int third = Integer.MIN_VALUE;
+
+        for (int i = 0; i < 5; i++) {
+            if (a[i] > largest) {
+                third = second;
+                second = largest;
+                largest = a[i];
+            } else if (a[i] > second && a[i] < largest) {
+                third = second;
+                second = a[i];
+            } else if (a[i] > third && a[i] < second) {
+                third = a[i];
+            }
+        }
+
+        if (third == Integer.MIN_VALUE) {
+            System.out.println("Third largest element not found");
+        } else {
+            System.out.println("Third largest = " + third);
+        }
+
+        sc.close();
+    }
+}
+
+
 SHIFT
 1)Shift first number to last
 public class Main {
@@ -346,3 +389,4 @@ public class Main {
         }
     }
 }
+
