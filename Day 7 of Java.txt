@@ -1,0 +1,703 @@
+
+
+1)Bubble Sort
+public class Main {
+    public static void main(String[] args) {
+        int a[]={40,10,30,20};
+        for(int i=0;i<a.length-1;i++){
+        for(int j=0;j<a.length-1;j++){
+            if (a[j]>a[j + 1]){
+                int temp=a[j];
+                a[j]=a[j + 1];
+                a[j+1]=temp;
+            }
+        }    
+        }
+     for(int i=0;i<a.length;i++)   
+         System.out.println(a[i]+"");
+    }
+}
+
+2) Selection Sort
+public class Main {
+    public static void main(String[] args) {
+        int a[]={40,10,30,20};
+        for(int i=0;i<a.length-1;i++){
+            int min =i;
+        for(int j=i+1;j<a.length-1;j++){
+            if (a[j]<a[min]){
+                min = j;
+            }
+        }  int temp=a[i];
+                a[i]=a[min];
+                a[min]=temp;  
+        }
+     for(int i=0;i<a.length;i++)   
+         System.out.println(a[i]+"");
+    }
+}
+
+3)Insertion Sort
+public class Main {
+public static void main(String[] args) {
+int a[] = {40, 10, 30, 20};
+
+    for (int i = 1; i < a.length; i++) {
+        int key = a[i];
+        int j = i - 1;
+
+        while (j >= 0 && a[j]>key) {
+             
+                a[j + 1] = a[j];
+                j--;
+             
+        }
+
+        a[j + 1] = key;
+    }
+
+    for (int i = 0; i < a.length; i++) {
+        System.out.println(a[i]);
+    }
+}
+
+}
+
+4)Merge Sort
+import java.util.Scanner;
+
+// Online Java Compiler (Editor)
+
+class Main {
+static void mergeSort(int a[], int left, int right) {
+if (left < right) {
+int mid = (left + right) / 2;
+
+        mergeSort(a, left, mid);
+        mergeSort(a, mid + 1, right);
+
+        mergeSort(a, left, mid, right);
+    }
+}
+
+static void mergeSort(int a[], int left, int mid, int right) {
+    int temp[] = new int[right - left + 1];
+    int i = left;
+    int j = mid + 1;
+    int k = 0;
+
+    while (i <= mid && j <= right) {
+        if (a[i] <= a[j]) {
+            temp[k++] = a[i++];
+        } else {
+            temp[k++] = a[j++];
+        }
+    }
+
+    while (i <= mid) {
+        temp[k++] = a[i++];
+    }
+
+    while (j <= right) {
+        temp[k++] = a[j++];
+    }
+
+    for (i = left; i <= right; i++) {
+        a[i] = temp[i - left];
+    }
+}
+
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+    System.out.println("Enter array size:");
+    int n = sc.nextInt();
+
+    int a[] = new int[n];
+
+    System.out.println("Enter array elements:");
+    for (int i = 0; i < n; i++) {
+        a[i] = sc.nextInt();
+    }
+
+    mergeSort(a, 0, n - 1);
+
+    System.out.println("Sorted array:");
+    for (int i = 0; i < n; i++) {
+        System.out.println(a[i] + "");
+    }
+
+    sc.close();
+}
+
+}
+
+
+
+2D ARRAY
+1)Print 2D ARRAY
+import java.util.Scanner;
+
+class Main {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+
+    int a[][] = new int[2][3];
+
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            a[i][j] = sc.nextInt();
+        }
+    }
+
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            System.out.print(a[i][j] + " ");
+        }
+        System.out.println();
+    }
+}
+
+}
+
+
+2)Sum of two elements
+import java.util.Scanner;
+
+class Main {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+
+    int a[][] = new int[2][3];
+    int sum = 0;
+    for(int i=0; i<2;i++){
+        for(int j=0;j<3;j++){
+            a[i][j]= sc.nextInt();
+            sum = sum+a[i][j];
+        }
+    }
+
+    
+        System.out.println("Sum:"+sum);
+    }
+}
+
+
+3)Sum of Rows and Columns
+import java.util.Scanner;
+
+class Main {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+
+int a[][] = new int[2][3];  
+  
+for(int i=0; i<2;i++){  
+    int sum = 0;  
+    for(int j=0;j<3;j++){  
+        a[i][j]= sc.nextInt();  
+        sum = sum+a[i][j];  
+    }  
+}
+
+System.out.println("sum"+sum);
+
+}
+
+}
+
+4)2D array  2matrix sum
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a[][] = new int[2][2];
+        int b[][] = new int[2][2];
+        int c[][] = new int[2][2];
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                a[i][j] = sc.nextInt();
+            }
+        }
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                b[i][j] = sc.nextInt();
+            }
+        }
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                c[i][j] = a[i][j] + b[i][j];
+                System.out.print(c[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+PRACTICE QN
+1)Already completed
+2)Already completed
+3)Find missing number 
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int a[] = new int[n];
+        int sum = 0;
+
+        for (int i = 0; i < n - 1; i++) {
+            a[i] = sc.nextInt();
+            sum += a[i];
+        }
+
+        int total = n * (n + 1) / 2;
+
+        System.out.println("Missing Number = " + (total - sum));
+    }
+} 
+
+
+4)Find the element that appears only once
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int a[] = new int[n];
+
+        for (int i = 0; i < n; i++)
+            a[i] = sc.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            int count = 0;
+
+            for (int j = 0; j < n; j++) {
+                if (a[i] == a[j])
+                    count++;
+            }
+
+            if (count == 1) {
+                System.out.println("Unique Element = " + a[i]);
+                break;
+            }
+        }
+    }
+}
+
+
+5)Find the fist repeating element
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int a[] = new int[n];
+
+        for (int i = 0; i < n; i++)
+            a[i] = sc.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (a[i] == a[j]) {
+                    System.out.println("First Repeating Element = " + a[i]);
+                    return;
+                }
+            }
+        }
+
+        System.out.println("No Repeating Element");
+    }
+}
+
+
+6)Find the fist non repeating element
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int a[] = new int[n];
+
+        for (int i = 0; i < n; i++)
+            a[i] = sc.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            int count = 0;
+
+            for (int j = 0; j < n; j++) {
+                if (a[i] == a[j])
+                    count++;
+            }
+
+            if (count == 1) {
+                System.out.println("First Non-Repeating Element = " + a[i]);
+                return;
+            }
+        }
+
+        System.out.println("No Non-Repeating Element");
+    }
+}
+
+
+7)Check Whether Array Is Sorted
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int a[] = new int[n];
+
+        for (int i = 0; i < n; i++)
+            a[i] = sc.nextInt();
+
+        boolean sorted = true;
+
+        for (int i = 0; i < n - 1; i++) {
+            if (a[i] > a[i + 1]) {
+                sorted = false;
+                break;
+            }
+        }
+
+        if (sorted)
+            System.out.println("Array is Sorted");
+        else
+            System.out.println("Array is Not Sorted");
+    }
+}
+
+
+8)Reverse Array Without Using Another Array
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int a[] = new int[n];
+
+        for (int i = 0; i < n; i++)
+            a[i] = sc.nextInt();
+
+        int left = 0, right = n - 1;
+
+        while (left < right) {
+            int temp = a[left];
+            a[left] = a[right];
+            a[right] = temp;
+
+            left++;
+            right--;
+        }
+
+        for (int x : a)
+            System.out.print(x + " ");
+    }
+}
+
+
+9)Find Maximum Difference
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int a[] = new int[n];
+
+        for (int i = 0; i < n; i++)
+            a[i] = sc.nextInt();
+
+        if (n < 2) {
+            System.out.println("Need at least 2 elements");
+            return;
+        }
+
+        int min = a[0];
+        int maxDiff = a[1] - a[0];
+
+        for (int i = 1; i < n; i++) {
+            int diff = a[i] - min;
+
+            if (diff > maxDiff)
+                maxDiff = diff;
+
+            if (a[i] < min)
+                min = a[i];
+        }
+
+        System.out.println("Maximum Difference = " + maxDiff);
+    }
+}
+
+
+10)Leaders in an Array
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int a[] = new int[n];
+
+        for (int i = 0; i < n; i++)
+            a[i] = sc.nextInt();
+
+        int leaders[] = new int[n];
+        int count = 0;
+        int max = a[n - 1];
+
+        leaders[count++] = max;
+
+        for (int i = n - 2; i >= 0; i--) {
+            if (a[i] > max) {
+                max = a[i];
+                leaders[count++] = max;
+            }
+        }
+
+        for (int i = count - 1; i >= 0; i--)
+            System.out.print(leaders[i] + " ");
+    }
+}
+
+
+11)Find Equilibrium index
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int a[] = new int[n];
+        int total = 0, leftSum = 0;
+
+        for (int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+            total += a[i];
+        }
+
+        for (int i = 0; i < n; i++) {
+            total -= a[i];
+
+            if (leftSum == total) {
+                System.out.println("Equilibrium Index = " + i);
+                return;
+            }
+
+            leftSum += a[i];
+        }
+
+        System.out.println("No Equilibrium Index");
+    }
+}
+
+
+12)Find pair with given sum
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int a[] = new int[n];
+
+        for (int i = 0; i < n; i++)
+            a[i] = sc.nextInt();
+
+        int target = sc.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (a[i] + a[j] == target) {
+                    System.out.println("Pair = " + a[i] + " " + a[j]);
+                    return;
+                }
+            }
+        }
+
+        System.out.println("Pair Not Found");
+    }
+}
+
+
+13)Find Majority Element
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int a[] = new int[n];
+
+        for (int i = 0; i < n; i++)
+            a[i] = sc.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            int count = 0;
+
+            for (int j = 0; j < n; j++) {
+                if (a[i] == a[j])
+                    count++;
+            }
+
+            if (count > n / 2) {
+                System.out.println("Majority Element = " + a[i]);
+                return;
+            }
+        }
+
+        System.out.println("No Majority Element");
+    }
+}
+
+
+14)Rearrange Array in Wave Form
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int a[] = new int[n];
+
+        for (int i = 0; i < n; i++)
+            a[i] = sc.nextInt();
+
+        for (int i = 0; i < n - 1; i += 2) {
+            int temp = a[i];
+            a[i] = a[i + 1];
+            a[i + 1] = temp;
+        }
+
+        for (int x : a)
+            System.out.print(x + " ");
+    }
+}
+
+
+15)Longest Consecutive Increasing Sequence
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int a[] = new int[n];
+
+        for (int i = 0; i < n; i++)
+            a[i] = sc.nextInt();
+
+        if (n == 0) {
+            System.out.println("Length = 0");
+            return;
+        }
+
+        int count = 1, max = 1;
+
+        for (int i = 1; i < n; i++) {
+            if (a[i] == a[i - 1] + 1)
+                count++;
+            else
+                count = 1;
+
+            if (count > max)
+                max = count;
+        }
+
+        System.out.println("Length = " + max);
+    }
+}
+
+16)Find Frequency Without HashMap
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int a[] = new int[n];
+        boolean visited[] = new boolean[n];
+
+        for (int i = 0; i < n; i++)
+            a[i] = sc.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            if (visited[i])
+                continue;
+
+            int count = 1;
+
+            for (int j = i + 1; j < n; j++) {
+                if (a[i] == a[j]) {
+                    count++;
+                    visited[j] = true;
+                }
+            }
+
+            System.out.println(a[i] + " -> " + count);
+        }
+    }
+}
+
+
+17)Find Smallest Positive Missing Number
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int a[] = new int[n];
+
+        for (int i = 0; i < n; i++)
+            a[i] = sc.nextInt();
+
+        int num = 1;
+
+        while (true) {
+            boolean found = false;
+
+            for (int i = 0; i < n; i++) {
+                if (a[i] == num) {
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) {
+                System.out.println(num);
+                break;
+            }
+
+            num++;
+        }
+    }
+}
