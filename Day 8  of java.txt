@@ -1,0 +1,602 @@
+ 2D  ARRAY 
+1) Transpose
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a[][] = new int[2][3];
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 3; j++) {
+                a[i][j] = sc.nextInt();
+            }
+        }
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 2; j++) {
+                System.out.print(a[j][i] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+2)Sum of diagonal
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a[][] = new int[3][3];
+            int sum = 0;
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                a[i][j] = sc.nextInt();
+            }
+        }
+
+        for (int j = 0; j < 3; j++) {
+        sum= sum+a[j][j];
+                System.out.print("Diagonal Sum:"+ sum);
+            }
+          }
+    }
+
+
+
+3) Identity Matix or not
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a[][] = new int[3][3];
+         boolean identity =true;  
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                a[i][j] = sc.nextInt();
+            }
+        }
+
+        for (int i = 0; i < 3; i++) {
+                for(int j=0;j<3;j++){
+              if(i==j && a[i][j]!=1) {
+                      identity=false;
+              }  else if(i!=j && a[i][j]!=0)   {
+                      identity=false;
+              }    
+                }
+            }
+            if(identity){
+                    System.out.println("Identity matrix");
+            }else{
+                    System.out.println("Not an identity Matrix");
+            }
+          }
+    }
+
+
+4)Find Largest element 
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a[][] = new int[2][3];  
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 3; j++) {
+                a[i][j] = sc.nextInt();
+            }
+        }
+int largest = a[0][0];
+                for(int i =0;i<2;i++){
+             for (int j = 0; j < 3; j++){
+                         if(a[i][j]>largest){
+                                     largest = a[i][j];
+                         }
+             }                
+                }
+        
+System.out.println("Largest Number:"+ largest);
+          }
+    }
+
+
+
+STRING
+1)Find length of the string
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+String name = sc.nextLine();
+            int len = name.length();
+            System.out.println(len);
+        
+          }
+    }
+
+
+2)Reverse order
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String name = sc.nextLine();
+
+        for (int i = name.length() - 1; i >= 0; i--) {
+            System.out.print(name.charAt(i));
+        }
+    }
+}
+
+
+3) Palindrome or not
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String name = sc.nextLine();
+String rev = "";
+        for (int i = name.length() - 1; i >= 0; i--) {
+         rev = rev +name.charAt(i) ; System.out.print(rev);
+        }
+if(name.equals(rev)){
+                System.out.println("Palindrom");
+        }else{
+                System.out.println("Not a palindrom");
+        }
+    }
+}
+
+
+4)Count vowels and consonants and also count capital and small letter 
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String name = sc.nextLine().toLowerCase();
+int vowels=0, consonants=0;
+        for (int i = 0; i < name.length(); i++) {
+         char ch = name.charAt(i) ;
+                if(ch>='a' && ch<='z'){
+       if(ch=='a' || ch=='e' || ch=='i'|| ch=='o'||   ch=='u') {
+               vowels++;
+       }  else{
+               consonants++;
+       }            
+        }
+
+    }
+            System.out.println("vowels:"+vowels);
+            System.out.println("consonants:"+consonants);
+}
+}
+
+
+5)Reverse the 2 word
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+            String s = sc.nextLine();
+            String[] words = s.split(" ");
+            String result = "";
+            for(int i = 0 ; i < words.length; i++){
+                    String word = words[i];
+                    for(int j = word.length() - 1 ;j >= 0;j--){
+                            result += word.charAt(j);
+                    }if(i<words.length-1){
+                            result += " ";
+                    }
+            }
+            System.out.println(result);
+    }
+}
+
+6)Anagram or not(Same length & same character)
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+            System.out.println("Enter first word:");
+            String s1 = sc.nextLine();
+            System.out.println("Enter second word:");
+            String s2 = sc.nextLine();
+            if(s1.length() != s2.length()){
+                    System.out.println("Not Anagram");
+            }else{
+                    char[] a = s1.toCharArray();
+                    char[] b = s2.toCharArray();
+                    java.util.Arrays.sort(a);
+                    java.util.Arrays.sort(b);
+                    if(java.util.Arrays.equals(a,b)){
+                            System.out.println("Anagram");
+                    }else{
+                            System.out.println("Not an Anagram");
+                    }
+            }
+            
+    }
+}
+
+
+PRACTICE QUESTIONS
+1)Remove duplicate characters
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String s = sc.nextLine();
+
+        String result = "";
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+
+            if (result.indexOf(ch) == -1) {
+                result += ch;
+            }
+        }
+
+        System.out.println("Result: " + result);
+        sc.close();
+    }
+}
+
+
+2)Find the first non-repeating character
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String s = sc.nextLine();
+
+        char answer = '\0';
+
+        for (int i = 0; i < s.length(); i++) {
+            int count = 0;
+
+            for (int j = 0; j < s.length(); j++) {
+                if (s.charAt(i) == s.charAt(j)) {
+                    count++;
+                }
+            }
+
+            if (count == 1) {
+                answer = s.charAt(i);
+                break;
+            }
+        }
+
+        if (answer == '\0') {
+            System.out.println("No non-repeating character");
+        } else {
+            System.out.println("First non-repeating character: " + answer);
+        }
+
+        sc.close();
+    }
+}
+
+
+3)Count words in a sentence
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a sentence: ");
+        String s = sc.nextLine().trim();
+
+        int count;
+
+        if (s.isEmpty()) {
+            count = 0;
+        } else {
+            count = s.split("\\s+").length;
+        }
+
+        System.out.println("Number of words: " + count);
+        sc.close();
+    }
+}
+
+
+4)Toggle uppercase and lowercase
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String s = sc.nextLine();
+
+        String result = "";
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+
+            if (Character.isUpperCase(ch)) {
+                result += Character.toLowerCase(ch);
+            } else if (Character.isLowerCase(ch)) {
+                result += Character.toUpperCase(ch);
+            } else {
+                result += ch;
+            }
+        }
+
+        System.out.println("Result: " + result);
+        sc.close();
+    }
+}
+
+
+5)Find the most frequent character
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String s = sc.nextLine();
+
+        char most = '\0';
+        int max = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            int count = 0;
+
+            for (int j = 0; j < s.length(); j++) {
+                if (s.charAt(i) == s.charAt(j)) {
+                    count++;
+                }
+            }
+
+            if (count > max) {
+                max = count;
+                most = s.charAt(i);
+            }
+        }
+
+        if (s.isEmpty()) {
+            System.out.println("String is empty");
+        } else {
+            System.out.println("Most frequent character: " + most);
+            System.out.println("Frequency: " + max);
+        }
+
+        sc.close();
+    }
+}
+
+
+6)Replace a word in a sentence
+import java.util.Scanner;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a sentence: ");
+        String s = sc.nextLine();
+
+        System.out.print("Enter the word to replace: ");
+        String target = sc.nextLine();
+
+        System.out.print("Enter the replacement word: ");
+        String replacement = sc.nextLine();
+
+        if (target.isEmpty()) {
+            System.out.println("Target word cannot be empty");
+        } else {
+            String regex = "\\b" + Pattern.quote(target) + "\\b";
+
+            String result = s.replaceAll(
+                regex, Matcher.quoteReplacement(replacement)
+            );
+
+            System.out.println("Result: " + result);
+        }
+
+        sc.close();
+    }
+}
+
+
+7)Find the longest word in a sentence
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a sentence: ");
+        String s = sc.nextLine().trim();
+
+        String longest = "";
+        int max = 0;
+
+        if (!s.isEmpty()) {
+            String[] words = s.split("\\s+");
+
+            for (int i = 0; i < words.length; i++) {
+                String word = words[i].replaceAll(
+                    "^[^a-zA-Z0-9]+|[^a-zA-Z0-9]+$", ""
+                );
+
+                if (word.length() > max) {
+                    max = word.length();
+                    longest = word;
+                }
+            }
+        }
+
+        if (max == 0) {
+            System.out.println("No words found");
+        } else {
+            System.out.println("Longest word: " + longest);
+            System.out.println("Length: " + max);
+        }
+
+        sc.close();
+    }
+}
+
+
+8)Check whether two strings are rotations
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first string: ");
+        String s1 = sc.nextLine();
+
+        System.out.print("Enter second string: ");
+        String s2 = sc.nextLine();
+
+        if (s1.length() == s2.length()
+                && (s1 + s1).contains(s2)) {
+            System.out.println("Strings are rotations");
+        } else {
+            System.out.println("Strings are not rotations");
+        }
+
+        sc.close();
+    }
+}
+
+
+9)Compress consecutive repeated characters
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String s = sc.nextLine();
+
+        String result = "";
+        int i = 0;
+
+        while (i < s.length()) {
+            char ch = s.charAt(i);
+            int count = 0;
+
+            while (i < s.length() && s.charAt(i) == ch) {
+                count++;
+                i++;
+            }
+
+            result += ch + String.valueOf(count);
+        }
+
+        System.out.println("Compressed string: " + result);
+        sc.close();
+    }
+}
+
+
+10)Find the longest common prefix
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first string: ");
+        String s1 = sc.nextLine();
+
+        System.out.print("Enter second string: ");
+        String s2 = sc.nextLine();
+
+        String prefix = "";
+        int min = Math.min(s1.length(), s2.length());
+
+        for (int i = 0; i < min; i++) {
+            if (s1.charAt(i) == s2.charAt(i)) {
+                prefix += s1.charAt(i);
+            } else {
+                break;
+            }
+        }
+
+        if (prefix.isEmpty()) {
+            System.out.println("No common prefix");
+        } else {
+            System.out.println("Common prefix: " + prefix);
+        }
+
+        sc.close();
+    }
+}
+
+
+11)Compare two strings without using equals()
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first string: ");
+        String s1 = sc.nextLine();
+
+        System.out.print("Enter second string: ");
+        String s2 = sc.nextLine();
+
+        boolean same = true;
+
+        if (s1.length() != s2.length()) {
+            same = false;
+        } else {
+            for (int i = 0; i < s1.length(); i++) {
+                if (s1.charAt(i) != s2.charAt(i)) {
+                    same = false;
+                    break;
+                }
+            }
+        }
+
+        if (same) {
+            System.out.println("Strings are equal");
+        } else {
+            System.out.println("Strings are not equal");
+        }
+
+        sc.close();
+    }
+}
